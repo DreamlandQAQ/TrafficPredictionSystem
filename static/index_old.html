@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>stgcn</title>
+    <style type="text/css">
+        html {
+            height: 100%
+        }
+
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px
+        }
+
+        #container {
+            height: 100%
+        }
+
+        .parent {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            width: 100%;
+        }
+
+        .left,
+        .mid,
+        .right {
+            height: 96vh;
+        }
+
+        .left {
+            border: rgb(0, 12, 212) solid 1px;
+            color: rgb(0, 12, 212);
+            width: 20vw;
+            font-size: 0.9em;
+        }
+
+        .mid {
+            border: rgb(0, 12, 212) solid 1px;
+            width: 50%;
+        }
+
+        .right {
+            border: rgb(0, 12, 212) solid 1px;
+            width: 50%;
+        }
+    </style>
+    <script type="text/javascript"
+        src="https://api.map.baidu.com/api?v=3.0&ak=E2BTpejcteYKfvnqljpSlszKBSjIIzlj"></script>
+    <script type="text/javascript" src="static/fly.min.js"></script>
+    <!-- <script type="text/javascript" src="static/buildMidMap.js"></script>
+    <script type="text/javascript" src="static/buildRightMap.js"></script> -->
+    <script type="text/javascript" src="static/core.js"></script>
+
+</head>
+
+<body>
+    <div class="parent">
+        <div class="left">
+            <p>
+                <label for="iptsheet">上传json文件</label>
+                <input type="file" id="iptsheet" accept=".json" onchange="getPredictResult(this)" />
+            </p>
+            <p>
+                <button type="button" onclick="fiveMinButtonClick()">五分钟后</button>
+            </p>
+            <p>
+                <button type="button" onclick="tenMinButtonClick()">十分钟后</button>
+            </p>
+            <p>
+                <button type="button" onclick="fifteenMinButtonClick()">十五分钟后</button>
+            </p>
+        </div>
+        <div class="mid" id="container1"></div>
+        <div class="right" id="container2"></div>
+    </div>
+
+    
+
+
+</body>
+
+</html>

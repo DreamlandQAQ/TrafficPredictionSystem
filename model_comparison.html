@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>模型对比</title>
+    <style type="text/css">
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 5px;
+            background-color: rgba(32, 73, 105, 1);
+        }
+
+        .span-col-2 {
+            grid-column: span 2 / auto;
+            background-color: rgba(255, 247, 247, 1);
+        }
+
+        .span-col-4 {
+            grid-column: span 4 / auto;
+            background-color: rgba(255, 247, 247, 1);
+        }
+
+        .span-col-3 {
+            grid-column: span 3 / auto;
+            background-color: rgba(255, 247, 247, 1);
+        }
+
+        .span-row-25 {
+            grid-row: span 25 / auto;
+            background-color: rgba(255, 247, 247, 1);
+        }
+
+        .span-row-100 {
+            grid-row: span 110 / auto;
+            background-color: rgba(255, 247, 247, 1);
+        }
+
+
+        .font2>p {
+            font-size: 45px;
+            text-shadow: 5px 5px 5px black;
+            text-align: justify;
+            text-align-last: center;
+            color: rgba(8, 255, 200, 1);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #87cefa;
+            background-color: #ffffff;
+            border: 2px solid #008cba;
+            border-radius: 8px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {
+            background-color: #dcdcdc
+        }
+
+        .button:active {
+            background-color: #ffffff;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .label {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #87cefa;
+            background-color: #ffffff;
+            border: 2px solid #008cba;
+            border-radius: 8px;
+            box-shadow: 0 9px #999;
+        }
+
+        .file {
+            margin-bottom: 30px;
+        }
+
+        .fileinp {
+            width: 108px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .upload {
+            width: 100px;
+            background-color: #82b6f4;
+            border-radius: 13px;
+            text-align: center;
+            padding: 4px;
+            color: #fff;
+        }
+
+        .file-up {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 30px;
+            cursor: pointer;
+
+        }
+
+        .fileinp:hover .upload {
+            background: #378eef;
+        }
+    </style>
+    <script type="text/javascript"
+        src="https://api.map.baidu.com/api?v=3.0&ak=OA4PGpWBmtw7wjry5LqQfxqyyNMXcAaa"></script>
+    <script type="text/javascript" src="static/fly.min.js"></script>
+    <script type="text/javascript" src="static/core.js"></script>
+    <!-- <script type="text/javascript" src="static/comparison_core.js"></script> -->
+    
+
+
+
+</head>
+
+<body>
+    <div class="grid">
+        <div class="span-col-2 span-row-25">
+            <div class="font2">
+                <p>
+                    <i>模型对比</i>
+                </p>
+            </div>
+        </div>
+        <div class="span-col-4 span-row-25">
+            <label for="name">请输入要查询的节点编号：</label>
+            <input type="text" id="getnodeid" name="name" size="10">
+            <p>
+                <button class="button" type="button" onclick="comparison_button()">确定</button>
+            </p>
+        </div>
+        <div class="span-col-3 span-row-100" id="container4"></div>
+        <div class="span-col-3 span-row-100" id="container5">
+            <textarea cols="100" rows="37">text2</textarea>
+        </div>
+        
+    </div>
+
+
+
+
+</body>
+
+</html>
